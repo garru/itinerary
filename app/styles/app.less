@@ -1,0 +1,46 @@
+@import "../../bower_components/bootstrap/less/variables.less"; 
+@grid-columns:              12;
+@grid-gutter-width:         30px;
+@grid-float-breakpoint:     768px;
+@import "../../bower_components/bootstrap/less/mixins.less";
+
+* {
+	font-family: Georgia, serif
+}
+
+h1 {
+	text-align: center;
+}
+
+.schedule {
+    float: left;
+}
+
+.event {
+	.make-row();
+    .clearfix();
+    margin-top: @grid-gutter-width;
+    margin-bottom: @grid-gutter-width;
+    .center-block;
+}
+
+.start_datetime {
+	.make-md-column(1);
+}
+
+.end_datetime {
+	.make-md-column(1);
+}
+
+.place {
+    .make-md-column(3);
+    .make-md-column-offset(1);
+}
+
+.description {
+    .make-md-column(3);
+}
+
+.info {
+    .make-md-column(3);
+}
